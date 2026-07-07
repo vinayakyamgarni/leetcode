@@ -18,12 +18,16 @@ class Solution {
             fast = fast.next.next;
         }
 
+       
+        if (fast != null) {
+            slow = slow.next;
+        }
 
-        // Reverse second half
+     
         ListNode second = reverseList(slow);
         ListNode first = head;
 
-        // Compare both halves
+       
         while (second != null) {
             if (first.val != second.val)
                 return false;
